@@ -269,11 +269,7 @@ struct CounterlikeTraits<Standard::MeterExtern<Standard::Arch::PSA>> {
 template <>
 struct CounterlikeTraits<Standard::MeterExtern<Standard::Arch::PNA>>
     : public CounterlikeTraits<Standard::MeterExtern<Standard::Arch::PSA>> {
-<<<<<<< HEAD
     static const cstring directPropertyName() { return "pna_direct_meter"_cs; }
-=======
-        static const cstring directPropertyName() { return "pna_direct_meter"_cs; }
->>>>>>> ae9a026ee (Add skeleton implementation for BMv2 PNA Backend)
 };
 
 }  // namespace Helpers
