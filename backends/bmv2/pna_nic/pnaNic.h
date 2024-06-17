@@ -46,7 +46,11 @@ namespace BMV2 {
 class PnaNicExpressionConverter : public ExpressionConverter {
  public:
     PnaNicExpressionConverter(P4::ReferenceMap *refMap, P4::TypeMap *typeMap,
+<<<<<<< HEAD
                               ProgramStructure *structure, cstring scalarsName)
+=======
+                                 ProgramStructure *structure, cstring scalarsName)
+>>>>>>> ae9a026ee (Add skeleton implementation for BMv2 PNA Backend)
         : BMV2::ExpressionConverter(refMap, typeMap, structure, scalarsName) {}
 
     void modelError(const char *format, const cstring field) {
