@@ -132,11 +132,15 @@ var hierarchy =
     [ "HalfOpenRange< Unit, Order >", "struct_half_open_range.html", null ],
     [ "hash_vector_base", "classhash__vector__base.html", [
       [ "hvec_map< P4::ProgramPoint, P4::Definitions * >", "classhvec__map.html", null ],
-      [ "hvec_map< const IR::Expression *, const P4::LocationSet * >", "classhvec__map.html", null ],
+      [ "hvec_map< const IR::IDeclaration *, def_info_t >", "classhvec__map.html", null ],
+      [ "hvec_map< const IR::Node *, hvec_set >", "classhvec__map.html", null ],
+      [ "hvec_map< P4::loc_t, const P4::LocationSet * >", "classhvec__map.html", null ],
       [ "hvec_map< const P4::BaseLocation *, const P4::ProgramPoints * >", "classhvec__map.html", null ],
       [ "hvec_map< const IR::IDeclaration *, P4::StorageLocation * >", "classhvec__map.html", null ],
       [ "hvec_map< cstring, const P4::StorageLocation * >", "classhvec__map.html", null ],
-      [ "hvec_map< KEY, VAL, HASH, PRED, ALLOC >", "classhvec__map.html", null ]
+      [ "hvec_set< const loc_t * >", "classhvec__set.html", null ],
+      [ "hvec_map< KEY, VAL, HASH, PRED, ALLOC >", "classhvec__map.html", null ],
+      [ "hvec_set< KEY, HASH, PRED, ALLOC >", "classhvec__set.html", null ]
     ] ],
     [ "hash_vector_base::internal", "classhash__vector__base.html#structhash__vector__base_1_1internal", null ],
     [ "hash_vector_base::lookup_cache", "structhash__vector__base_1_1lookup__cache.html", null ],
@@ -357,14 +361,12 @@ var hierarchy =
     [ "ordered_map< const IR::ConstructorCallExpression *, cstring >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Declaration_Instance *, P4::CallInfo * >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Declaration_Variable *, const cstring >", "classordered__map.html", null ],
-    [ "ordered_map< const IR::IDeclaration *, def_info_t >", "classordered__map.html", null ],
     [ "ordered_map< const IR::IDeclaration *, unsigned int >", "classordered__map.html", null ],
     [ "ordered_map< const IR::ITypeVar *, const IR::Type * >", "classordered__map.html", null ],
     [ "ordered_map< const IR::MethodCallExpression *, P4::FunctionSpecialization * >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Node *, block_t >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Node *, const IR::CompileTimeValue * >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Node *, const IR::P4Action * >", "classordered__map.html", null ],
-    [ "ordered_map< const IR::Node *, ordered_set >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Node *, P4::SpecializationInfo * >", "classordered__map.html", null ],
     [ "ordered_map< const IR::Node *, std::pair< gress_t, block_t > >", "classordered__map.html", null ],
     [ "ordered_map< const IR::P4Action *, const IR::P4Action * >", "classordered__map.html", null ],
@@ -423,7 +425,6 @@ var hierarchy =
     [ "ordered_set< BMV2::CFG::Node * >", "classordered__set.html", null ],
     [ "ordered_set< const IR::FieldList * >", "classordered__set.html", null ],
     [ "ordered_set< const IR::Parameter * >", "classordered__set.html", null ],
-    [ "ordered_set< const loc_t * >", "classordered__set.html", null ],
     [ "ordered_set< const P4::StorageLocation * >", "classordered__set.html", null ],
     [ "ordered_set< cstring >", "classordered__set.html", null ],
     [ "P4::AbstractParserDriver", "class_p4_1_1_abstract_parser_driver.html", [
@@ -573,6 +574,7 @@ var hierarchy =
         [ "P4::AbstractInliner< InlineList, InlineWorkList >", "class_p4_1_1_abstract_inliner.html", null ],
         [ "P4::ComputeDefUse", "class_p4_1_1_compute_def_use.html", null ],
         [ "P4::ComputeDefUse::SetupJoinPoints", "class_p4_1_1_compute_def_use_1_1_setup_join_points.html", null ],
+        [ "P4::ConstantTypeSubstitution", "class_p4_1_1_constant_type_substitution.html", null ],
         [ "P4::CreateStructInitializers", "class_p4_1_1_create_struct_initializers.html", null ],
         [ "P4::Deprecated", "class_p4_1_1_deprecated.html", null ],
         [ "P4::DiscoverActionsInlining", "class_p4_1_1_discover_actions_inlining.html", null ],
@@ -639,6 +641,7 @@ var hierarchy =
       [ "P4::IsValid", "class_p4_1_1_is_valid.html", null ],
       [ "P4::OrPolicy", "class_p4_1_1_or_policy.html", null ]
     ] ],
+    [ "P4::loc_t", "struct_p4_1_1loc__t.html", null ],
     [ "P4::NameGenerator", "class_p4_1_1_name_generator.html", [
       [ "P4::MinimalNameGenerator", "class_p4_1_1_minimal_name_generator.html", null ],
       [ "P4::ReferenceMap", "class_p4_1_1_reference_map.html", null ]
@@ -743,8 +746,10 @@ var hierarchy =
     [ "P4Tools::P4Testgen::Continuation::Return", "struct_p4_tools_1_1_p4_testgen_1_1_continuation_1_1_return.html", null ],
     [ "P4Tools::P4Testgen::EBPF::EBPFConstants", "class_p4_tools_1_1_p4_testgen_1_1_e_b_p_f_1_1_e_b_p_f_constants.html", null ],
     [ "P4Tools::P4Testgen::ExecutionState::StackFrame", "class_p4_tools_1_1_p4_testgen_1_1_execution_state_1_1_stack_frame.html", null ],
+    [ "P4Tools::P4Testgen::ExprStepper::ExternMethodImpls< StepperType >", "class_p4_tools_1_1_p4_testgen_1_1_expr_stepper_1_1_extern_method_impls.html", null ],
+    [ "P4Tools::P4Testgen::ExprStepper::ExternMethodImpls< P4Tools::P4Testgen::ExprStepper >", "class_p4_tools_1_1_p4_testgen_1_1_expr_stepper_1_1_extern_method_impls.html", null ],
     [ "P4Tools::P4Testgen::ExprStepper::PacketCursorAdvanceInfo", "class_p4_tools_1_1_p4_testgen_1_1_expr_stepper.html#struct_p4_tools_1_1_p4_testgen_1_1_expr_stepper_1_1_packet_cursor_advance_info", null ],
-    [ "P4Tools::P4Testgen::ExternMethodImpls", "class_p4_tools_1_1_p4_testgen_1_1_extern_method_impls.html", null ],
+    [ "P4Tools::P4Testgen::ExternInfo", "class_p4_tools_1_1_p4_testgen_1_1_extern_info.html", null ],
     [ "P4Tools::P4Testgen::FinalState", "class_p4_tools_1_1_p4_testgen_1_1_final_state.html", null ],
     [ "P4Tools::P4Testgen::PacketVars", "class_p4_tools_1_1_p4_testgen_1_1_packet_vars.html", null ],
     [ "P4Tools::P4Testgen::Pna::PnaConstants", "class_p4_tools_1_1_p4_testgen_1_1_pna_1_1_pna_constants.html", null ],
@@ -1130,6 +1135,8 @@ var hierarchy =
     [ "std::hash< ClosedRange< Unit, Order > >", "structstd_1_1hash_3_01_closed_range_3_01_unit_00_01_order_01_4_01_4.html", null ],
     [ "std::hash< cstring >", "structstd_1_1hash_3_01cstring_01_4.html", null ],
     [ "std::hash< HalfOpenRange< Unit, Order > >", "structstd_1_1hash_3_01_half_open_range_3_01_unit_00_01_order_01_4_01_4.html", null ],
+    [ "std::hash< P4::ComputeDefUse::loc_t >", "structstd_1_1hash_3_01_p4_1_1_compute_def_use_1_1loc__t_01_4.html", null ],
+    [ "std::hash< P4::loc_t >", "structstd_1_1hash_3_01_p4_1_1loc__t_01_4.html", null ],
     [ "std::hash< P4::ProgramPoint >", "structstd_1_1hash_3_01_p4_1_1_program_point_01_4.html", null ],
     [ "std::hash< std::pair< T1, T2 > >", "structstd_1_1hash_3_01std_1_1pair_3_01_t1_00_01_t2_01_4_01_4.html", null ],
     [ "std::hash< std::tuple< Types... > >", "structstd_1_1hash_3_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html", null ],
@@ -1315,12 +1322,12 @@ var hierarchy =
       [ "Util::FilterEnumerator< T, Filter >", "class_util_1_1_filter_enumerator.html", null ],
       [ "Util::SingleEnumerator< T >", "class_util_1_1_single_enumerator.html", null ]
     ] ],
-    [ "Util::Enumerator< Iter::value_type >", "class_util_1_1_enumerator.html", [
-      [ "Util::IteratorEnumerator< Iter >", "class_util_1_1_iterator_enumerator.html", null ]
-    ] ],
     [ "Util::Enumerator< S >", "class_util_1_1_enumerator.html", [
       [ "Util::AsEnumerator< T, S >", "class_util_1_1_as_enumerator.html", null ],
       [ "Util::MapEnumerator< T, S, Mapper >", "class_util_1_1_map_enumerator.html", null ]
+    ] ],
+    [ "Util::Enumerator< std::iterator_traits< Iter >::value_type >", "class_util_1_1_enumerator.html", [
+      [ "Util::IteratorEnumerator< Iter >", "class_util_1_1_iterator_enumerator.html", null ]
     ] ],
     [ "Util::EnumeratorHandle< T >", "class_util_1_1_enumerator_handle.html", null ],
     [ "Util::Hash", "struct_util_1_1_hash.html", null ],
@@ -1787,6 +1794,7 @@ var hierarchy =
         [ "P4::CloneConstants", "class_p4_1_1_clone_constants.html", null ],
         [ "P4::CloneExpressions", "class_p4_1_1_clone_expressions.html", null ],
         [ "P4::CloneVariableDeclarations", "class_p4_1_1_clone_variable_declarations.html", null ],
+        [ "P4::ConstantTypeSubstitution", "class_p4_1_1_constant_type_substitution.html", null ],
         [ "P4::CopySrcInfo", "class_p4_1_1_copy_src_info.html", null ],
         [ "P4::CreateBuiltins", "class_p4_1_1_create_builtins.html", null ],
         [ "P4::CreateSpecializedTypes", "class_p4_1_1_create_specialized_types.html", null ],
